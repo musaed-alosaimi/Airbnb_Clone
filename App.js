@@ -43,7 +43,7 @@ function App() {
     user = await AsyncStorage.getItem("user");
     token = await AsyncStorage.getItem("token");
     user = JSON.parse(user);
-
+    console.log("App.js file, line 46.");
     try {
       let isAuth = auth === "true";
 
