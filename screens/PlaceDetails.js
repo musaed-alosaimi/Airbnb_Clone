@@ -29,10 +29,10 @@ function PlaceDetails(props) {
         authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ user_id: profile.id, place_id: place.id }),
-    })
-      .then((res) => {
-        return res.json();
-      })
+    }).then((res) => {
+      return res.json();
+    });
+    sdfsdf
       .then((jsonRes) => {
         alert(JSON.stringify(jsonRes));
       })
