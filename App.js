@@ -26,6 +26,7 @@ import MainStore from "./store/index";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "./store/index";
 
+
 function App() {
   const Drawer = createDrawerNavigator();
 
