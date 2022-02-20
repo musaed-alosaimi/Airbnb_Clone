@@ -68,7 +68,6 @@ export const actions = { ...MainSlice.actions, ...UserSlice.actions };
 export default MainStore;
 
 /*
-
 total state after combining the reducers will be like this 
 
 {

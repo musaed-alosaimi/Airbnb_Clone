@@ -32,21 +32,21 @@ function Home(props) {
 
   let dispatch = useDispatch();
 
-  useEffect(async () => {
+  useEffect(() => {
     try {
-      let propertiesData = await axios.get(
-        `http://${Network_IP}:3000/api/v1/properties`,
-        {
+      axios
+        .get(`http://${Network_IP}:3000/api/v1/properties`, {
           headers: { authorization: `Bearer ${token}` },
-        }
-      );
-      let response = propertiesData.data;
+        })
+        .then((propertiesData) => {
+          let response = propertiesData.data;
 
-      props_clone = [].concat(response.data);
+          props_clone = [].concat(response.data);
 
-      dispatch(actions.ShowPlaces(response.data));
+          dispatch(actions.ShowPlaces(response.data));
 
-      setLoading(false);
+          setLoading(false);
+        });
     } catch (err) {
       console.log(err);
     }
